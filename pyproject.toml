@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gekko-sync-windows"
+version = "0.1.0"
+description = "Cliente independiente de Gekko Sync para Windows"
+requires-python = ">=3.11"
+dependencies = ["watchdog>=6,<8", "pystray>=0.19.5,<0.20", "Pillow>=11,<13"]
+
+[project.gui-scripts]
+gekko-sync = "gekko_sync.ui:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
